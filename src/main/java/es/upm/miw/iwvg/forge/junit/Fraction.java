@@ -53,4 +53,41 @@ public class Fraction {
         return denominator;
     }
 
+    public int setNumerator(int numerator) {
+        this.numerator = numerator;
+        return this.numerator;
+    }
+
+    public int setDenominator(int denominator) {
+        this.denominator = denominator;
+        return this.denominator;
+    }
+
+    public Fraction restaFraction(Fraction fractionOne, Fraction fractionTwo){
+        int numeratorOne = fractionOne.getNumerator();
+        int numeratorTwo = fractionTwo.getNumerator();
+        int denominatorOne = fractionTwo.getDenominator();
+        int denominatorTwo = fractionTwo.getDenominator();
+
+        System.out.println(numeratorOne + " <<< numeratorOne");
+        System.out.println(denominatorOne + " <<< denominatorOne");
+        System.out.println(numeratorTwo + " <<< numeratorTwo");
+        System.out.println(denominatorTwo + " <<< denominatorTwo");
+
+
+        if(denominatorOne == denominatorTwo) {
+            /*numeratorThree = numeratorOne - numeratorTwo;
+            denominatorThree = denominatorOne;*/
+            System.out.println(denominatorOne + " = " + denominatorTwo);
+        }else{
+            /*numeratorThree = (numeratorOne * denominatorTwo)-(numeratorTwo * denominatorOne);
+            denominatorThree = denominatorOne * denominatorTwo;*/
+            System.out.println(denominatorOne + " != " + denominatorTwo);
+        }
+
+
+
+        return fractionThree;
+    }
+
 }
