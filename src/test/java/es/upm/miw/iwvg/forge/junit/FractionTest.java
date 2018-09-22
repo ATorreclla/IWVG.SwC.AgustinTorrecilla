@@ -12,9 +12,7 @@ public class FractionTest {
 
     @BeforeEach
     void before() {
-        this.fraction = new Fraction(5, 5);
-        this.fractionTwo = new Fraction(2, 5);
-        this.fractionThree = new Fraction(0, 0);
+        this.fraction = new Fraction(625, 5);
     }
 
     @Test
@@ -36,9 +34,11 @@ public class FractionTest {
     }
 
     @Test
-    void testrestaFraction() {
-        fractionThree.restaFraction(fraction, fractionTwo);
-        assertEquals(3, this.fractionThree.getNumerator());
-        assertEquals(5, this.fractionThree.getDenominator());
+    void testRestarFraction() {
+        this.fraction = new Fraction(5, 5);
+        this.fractionTwo = new Fraction(2, 5);
+        fractionThree = fraction.restarFraction(fraction, fractionTwo);
+        assertEquals(15, fractionThree.getNumerator());
+        assertEquals(25, fractionThree.getDenominator());
     }
 }
