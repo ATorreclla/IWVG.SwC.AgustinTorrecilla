@@ -53,4 +53,11 @@ public class Fraction {
         return denominator;
     }
 
+    public Fraction restarFraction(Fraction fractionOne , Fraction fractionTwo){
+        Fraction aux = new Fraction();
+        aux.numerator = fractionOne.numerator * fractionTwo.denominator - fractionOne.denominator * fractionTwo.numerator;
+        aux.denominator = fractionOne.denominator * fractionTwo.denominator;
+        return aux;
+    }
+
 }
