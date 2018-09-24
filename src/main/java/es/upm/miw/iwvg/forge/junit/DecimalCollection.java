@@ -50,5 +50,8 @@ public class DecimalCollection {
         }
         return higher;
     }
+    public boolean approved(){
+        return (this.sum()/this.size() > 5) ? true : false;
+    }
 
 }
