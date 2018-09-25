@@ -1,8 +1,10 @@
 package es.upm.miw.iwvg.forge.junit;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FractionTest {
 
@@ -40,5 +42,12 @@ public class FractionTest {
         fractionThree = fraction.restarFraction(fraction, fractionTwo);
         assertEquals(15, fractionThree.getNumerator());
         assertEquals(25, fractionThree.getDenominator());
+    }
+
+    @Test
+    void testEquivalenFraction(){
+        this.fractionTwo = new Fraction(5,625);
+        assertEquals(true,fraction.equivalenFractions(fraction, fraction));
+        assertEquals(false,fraction.equivalenFractions(fractionTwo, fraction));
     }
 }
