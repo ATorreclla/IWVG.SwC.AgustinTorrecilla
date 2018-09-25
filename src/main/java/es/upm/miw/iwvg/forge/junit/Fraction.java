@@ -64,5 +64,9 @@ public class Fraction {
 
     }
 
-
+    public boolean fraccionCocienteEntero(Fraction fractionOne){
+        assert fractionOne!=null;
+        if(fractionOne.getDenominator() == 0) throw new ArithmeticException("denominator == 0");
+        return fractionOne.getNumerator()%fractionOne.getDenominator()==0;
+    }
 }

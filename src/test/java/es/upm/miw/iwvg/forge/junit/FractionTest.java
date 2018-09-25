@@ -4,7 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FractionTest {
 
@@ -50,4 +52,17 @@ public class FractionTest {
         assertEquals(true,fraction.equivalenFractions(fraction, fraction));
         assertEquals(false,fraction.equivalenFractions(fractionTwo, fraction));
     }
+
+    @Test
+    void testfraccionCocienteEntero(){
+        fractionTwo = new Fraction(7,3);
+        fractionThree = new Fraction(5,0);
+        assertTrue(fraction.fraccionCocienteEntero(this.fraction));
+        assertFalse(fraction.fraccionCocienteEntero(fractionTwo));
+        assertThrows(ArithmeticException.class, () -> new Fraction().fraccionCocienteEntero(fractionThree));
+
+
+    }
+
+
 }
