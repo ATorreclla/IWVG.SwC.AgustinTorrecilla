@@ -47,7 +47,7 @@ public class FractionTest {
     @Test
     void testEquivalenFraction(){
         this.fractionTwo = new Fraction(5,625);
-        Assertions.assertEquals(true,fraction.equivalenFractions(fraction, fraction));
-        Assertions.assertEquals(false,fraction.equivalenFractions(fractionTwo, fraction));
+        assertEquals(true,fraction.equivalenFractions(fraction, fraction));
+        assertEquals(false,fraction.equivalenFractions(fractionTwo, fraction));
     }
 }
