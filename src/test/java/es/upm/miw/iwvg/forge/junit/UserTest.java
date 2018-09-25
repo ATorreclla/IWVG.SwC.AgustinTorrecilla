@@ -29,4 +29,7 @@ public class UserTest {
     void testInitials() {
         assertEquals("R.", this.user.initials());
     }
+
+    @Test
+    void testFormatToList() {assertEquals("Nadal, Rafael",this.user.formatToList());}
 }
