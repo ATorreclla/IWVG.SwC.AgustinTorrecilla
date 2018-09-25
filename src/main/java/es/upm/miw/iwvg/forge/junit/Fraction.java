@@ -59,5 +59,10 @@ public class Fraction {
         aux.denominator = fractionOne.denominator * fractionTwo.denominator;
         return aux;
     }
+    public boolean equivalenFractions(Fraction fractionOne , Fraction fractionTwo){
+        return ((fractionOne.getNumerator()*fractionTwo.getDenominator())==(fractionOne.getDenominator()*fractionTwo.getNumerator()));
+
+    }
+
 
 }
